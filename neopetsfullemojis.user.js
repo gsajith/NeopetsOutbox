@@ -5,6 +5,7 @@
 // @description  Add all emojis and most frequently used to Neoboards
 // @author       Gautham Sajith (https://github.com/gsajith)
 // @match        https://www.neopets.com/neoboards/topic.phtml?topic=*
+// @match        https://www.neopets.com/neoboards/create_topic.phtml?board=*
 // @icon         https://www.neopets.com/favicon.ico
 // @grant        GM_getValue
 // @grant        GM_setValue

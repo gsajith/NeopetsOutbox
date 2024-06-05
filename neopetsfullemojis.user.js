@@ -1239,9 +1239,9 @@ function createEmoticonSheet(setName, index) {
     navRow.style.display = "flex";
     navRow.style.justifyContent = "space-between";
     navRow.style.position = "absolute";
-    navRow.style.top = -28;
+    navRow.style.top = "-28px";
     navRow.style.width = "100%";
-    navRow.style.padding = 4;
+    navRow.style.padding = "4px";
     navRow.style.background = "#000000";
     navRow.style.color = "white";
     navRow.classList.add("topicReplyTitle");

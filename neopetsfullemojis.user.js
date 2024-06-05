@@ -1184,8 +1184,8 @@ const smileyClass = window.location.href.includes("create_topic") ? "topicCreate
     const smileyBox = Array.from(document.getElementsByClassName(smileyClass))[0];
     smileyBox.innerHTML = "";
     smileyBox.style.paddingTop = "28px";
-    smileyBox.style.minHeight = 100;
-    smileyBox.style.minWidth = 155;
+    smileyBox.style.minHeight = "100px";
+    smileyBox.style.width = "155px";
     if (Object.keys(recentEmoticons).length > 0) {
         const container = createEmoticonSheet("Recent", 0);
         const recents = Object.values(recentEmoticons).sort((a,b) => b.date - a.date).slice(0, 20);

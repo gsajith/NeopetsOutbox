@@ -1174,7 +1174,7 @@ const EMOTICON_SETS = [
 const generatedSheets = [];
 let selectedSheet = -1;
 const recentEmoticons = GM_getValue('np_favemoticons', {});
-let renderedRecent = {};
+let renderedRecent = false;
 let recentChanged = false;
 
 const smileyClass = window.location.href.includes("create_topic") ? "topicCreateSmilies-neoboards" : "replySmilies-neoboards";
@@ -1193,6 +1193,7 @@ const smileyClass = window.location.href.includes("create_topic") ? "topicCreate
             container.appendChild(createClickableEmoticon(recents[j].emoticon));
         }
         generatedSheets.push(container);
+        renderedRecent = true;
     }
     for(let i = 0; i < EMOTICON_SETS.length; i++) {
         const set = EMOTICON_SETS[i];
@@ -1224,7 +1225,9 @@ function prevSheet() {
         for (let j = 0; j < recents.length; j++) {
             container.appendChild(createClickableEmoticon(recents[j].emoticon));
         }
-        generatedSheets[0] = container;
+        if (renderedRecent) {
+            generatedSheets[0] = container;
+        }
         recentChanged = false;
     }
     smileyBox.appendChild(generatedSheets[selectedSheet]);

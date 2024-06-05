@@ -1242,9 +1242,12 @@ function createEmoticonSheet(setName, index) {
     navRow.style.top = "-28px";
     navRow.style.width = "100%";
     navRow.style.padding = "4px";
-    navRow.style.background = "#000000";
-    navRow.style.color = "white";
-    navRow.classList.add("topicReplyTitle");
+    if (window.location.href.includes("create_topic")) {
+        navRow.style.background = "#2E72C0";
+        navRow.style.color = "white";
+    } else {
+        navRow.classList.add("topicReplyTitle");
+    }
     navRow.style.userSelect = "none";
 
     const prev = document.createElement('div');

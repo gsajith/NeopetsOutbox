@@ -1177,9 +1177,11 @@ const recentEmoticons = GM_getValue('np_favemoticons', {});
 let renderedRecent = {};
 let recentChanged = false;
 
+const smileyClass = window.location.href.includes("create_topic") ? "topicCreateSmilies-neoboards" : "replySmilies-neoboards";
+
 (function() {
     'use strict';
-    const smileyBox = Array.from(document.getElementsByClassName("replySmilies-neoboards"))[0];
+    const smileyBox = Array.from(document.getElementsByClassName(smileyClass))[0];
     smileyBox.innerHTML = "";
     smileyBox.style.paddingTop = "28px";
     smileyBox.style.minHeight = 100;
@@ -1206,14 +1208,14 @@ let recentChanged = false;
 })();
 
 function nextSheet() {
-    const smileyBox = Array.from(document.getElementsByClassName("replySmilies-neoboards"))[0];
+    const smileyBox = Array.from(document.getElementsByClassName(smileyClass))[0];
     smileyBox.innerHTML = "";
     selectedSheet = Math.min(selectedSheet+1, generatedSheets.length - 1);
     smileyBox.appendChild(generatedSheets[selectedSheet]);
 }
 
 function prevSheet() {
-    const smileyBox = Array.from(document.getElementsByClassName("replySmilies-neoboards"))[0];
+    const smileyBox = Array.from(document.getElementsByClassName(smileyClass))[0];
     smileyBox.innerHTML = "";
     selectedSheet = Math.max(selectedSheet-1, 0);
     if (selectedSheet === 0 && Object.keys(recentEmoticons).length > 0 && recentChanged) {

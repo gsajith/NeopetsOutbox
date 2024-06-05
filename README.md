@@ -7,7 +7,7 @@ Userscript that adds a sent outbox to Neopets Neomails.
 Adds all emojis (+ recently used ones) in Neoboards.
 
 
-Install using [Tampermonkey](https://www.tampermonkey.net/) or similar Browser extension.
-- Install the extension
+#### Install using [Tampermonkey](https://www.tampermonkey.net/) or similar Browser extension.
+- Install the above extension
 - Open the script you want to install and hit "Raw" to open the file in your script extension
 - Hit install to install the script

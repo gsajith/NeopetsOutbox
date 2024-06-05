@@ -404,9 +404,8 @@ function stripHtml(html)
 
     function addRecipientChangeListener() {
         const recipientInput = Array.from(document.getElementsByTagName('input')).filter(input => input.name === 'recipient')[0];
-        if (recipientInput.type === "hidden") {
-            updateSentMessagesFor(recipientInput.value);
-        } else {
+        updateSentMessagesFor(recipientInput.value);
+        if (recipientInput.type !== "hidden") {
             recipientInput.addEventListener("input", (e) => {
                 updateSentMessagesFor(e.target.value);
             });

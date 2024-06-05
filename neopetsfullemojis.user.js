@@ -1242,6 +1242,8 @@ function createEmoticonSheet(setName, index) {
     navRow.style.top = -28;
     navRow.style.width = "100%";
     navRow.style.padding = 4;
+    navRow.style.background = "#000000";
+    navRow.style.color = "white";
     navRow.classList.add("topicReplyTitle");
     navRow.style.userSelect = "none";
 
